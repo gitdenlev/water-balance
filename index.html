@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Измерение выпитой воды</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <button>Click</button>
+    <!-- ТЕ КТО РАБОТАЕТ С БЛОКОМ header УБЕДИТЕЛЬНАЯ ПРОСЬБА НЕ ЗАЛАЗИТЬ И НЕ ИЗМЕНЯТЬ СТИЛИ В БЛОКЕ НИЖЕ, НЕ ИСПОЛЬЗУЙТЕ У СЕБЯ ТАКИЕ СТИЛИ КОТОРЫЕ МОГЛИ БЫ ПОМЕШАТЬ ВНЕШНЕМУ ВИДУ КОНТЕЙНЕРА НИЖЕ   -->
+   
+    <header>
+        <div></div>
+    </header>
+
+    
+    <main>
+        <!-- ТЕ КТО РАБОТАЕТ С БЛОКОМ main УБЕДИТЕЛЬНАЯ ПРОСЬБА НЕ ЗАЛАЗИТЬ И НЕ ИЗМЕНЯТЬ СТИЛИ В БЛОКЕ ВЫШЕ, НЕ ИСПОЛЬЗУЙТЕ У СЕБЯ ТАКИЕ СТИЛИ КОТОРЫЕ МОГЛИ БЫ ПОМЕШАТЬ ВНЕШНЕМУ ВИДУ КОНТЕЙНЕРА СВЕРХУ   -->
+    <div class="container">
+        <!-- Блок с инпутом слева -->
+        <div class="input-container">
+            <input type="number" id="waterInput" placeholder="Уведіть кількість">
+            <button id="updateButton">Додати</button>
+            <button id="resetButton">Зкинути прогрес</button>
+        </div>
+
+        <table>
+            <tr>    
+                <th>Виберіть ціль на день</th>
+            </tr>
+            <tr>
+                <td><button class="set-target" value="1">1L</button></td>
+            </tr>
+            <tr>
+                <td><button class="set-target" value="3">3L</button></td>
+            </tr>
+            <tr>
+                <td><button class="set-target" value="8">8L</button></td>
+            </tr>
+        </table>
+
+        <!-- Блок с кругом справа -->
+        <div class="circle-container">
+            <svg class="progress-ring" width="150" height="150">
+                <circle class="progress-ring__circle" stroke="blue" stroke-width="20" fill="transparent" r="60" cx="70" cy="70" />
+            </svg>
+            <div class="circle-text" id="circleText">0%</div>
+        </div>
+        
+    </div>
+    <main>
+
+    <script src="script.js"></script>
 </body>
 </html>
