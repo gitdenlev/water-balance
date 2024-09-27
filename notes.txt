@@ -1,3 +1,6 @@
-1) git add .
-2) git commit -m "Тут пишеш зміни"
-3) git push origin main
+Перед тим як починаєш працювати то пишеш цю команду
+git pull origin main
+
+git add .
+git commit -m "Тут пишеш зміни"
+git push origin main
