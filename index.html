@@ -1,55 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HydroDay</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ТЕ КТО РАБОТАЕТ С БЛОКОМ header УБЕДИТЕЛЬНАЯ ПРОСЬБА НЕ ЗАЛАЗИТЬ И НЕ ИЗМЕНЯТЬ СТИЛИ В БЛОКЕ НИЖЕ, НЕ ИСПОЛЬЗУЙТЕ У СЕБЯ ТАКИЕ СТИЛИ КОТОРЫЕ МОГЛИ БЫ ПОМЕШАТЬ ВНЕШНЕМУ ВИДУ КОНТЕЙНЕРА НИЖЕ   -->
-   
-    <header>
-        <div></div>
-    </header>
-
-    
-    <main>
-        <!-- ТЕ КТО РАБОТАЕТ С БЛОКОМ main УБЕДИТЕЛЬНАЯ ПРОСЬБА НЕ ЗАЛАЗИТЬ И НЕ ИЗМЕНЯТЬ СТИЛИ В БЛОКЕ ВЫШЕ, НЕ ИСПОЛЬЗУЙТЕ У СЕБЯ ТАКИЕ СТИЛИ КОТОРЫЕ МОГЛИ БЫ ПОМЕШАТЬ ВНЕШНЕМУ ВИДУ КОНТЕЙНЕРА СВЕРХУ   -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notiflix@3.2.5/dist/notiflix-3.2.5.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.5/dist/notiflix-aio-3.2.5.min.js"></script>
+  </head>
+  <body>
     <div class="container">
-        <!-- Блок с инпутом слева -->
-        <div class="input-container">
-            <input type="text" id="waterInput" placeholder="Уведіть кількість">
-            <button id="updateButton">Додати</button>
-            <button id="resetButton">Зкинути прогрес</button>
+      <div class="left-section">
+        <h1>Калькулятор випитої води за день</h1>
+        <label for="waterInput">Введіть кількість води:</label>
+        <input type="text" id="waterInput" placeholder="Кількість води (л)" />
+        <button id="updateButton">Додати</button>
+
+        <h2>Виберіть ціль:</h2>
+        <div class="target-buttons">
+          <button class="set-target" value="1">1L</button>
+          <button class="set-target" value="3">3L</button>
+          <button class="set-target" value="8">8L</button>
         </div>
 
-        <table>
-            <tr>    
-                <th>Виберіть ціль на день</th>
-            </tr>
-            <tr>
-                <td><button class="set-target" value="1">1L</button></td>
-            </tr>
-            <tr>
-                <td><button class="set-target" value="3">3L</button></td>
-            </tr>
-            <tr>
-                <td><button class="set-target" value="8">8L</button></td>
-            </tr>
-        </table>
+        <button id="resetButton">Зкинути прогрес</button>
+      </div>
 
-        <!-- Блок с кругом справа -->
+      <div class="right-section">
         <div class="circle-container">
-            <svg class="progress-ring" width="150" height="150">
-                <circle class="progress-ring__circle" stroke="blue" stroke-width="20" fill="transparent" r="60" cx="70" cy="70" />
-            </svg>
-            <div class="circle-text" id="circleText">0%</div>
+          <svg class="progress-ring" width="150" height="150">
+            <circle
+              class="progress-ring__circle"
+              stroke="blue"
+              stroke-width="15"
+              fill="transparent"
+              r="60"
+              cx="75"
+              cy="75"
+            />
+          </svg>
+          <div class="circle-text" id="circleText">0%</div>
         </div>
-        
+      </div>
     </div>
-    <main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
