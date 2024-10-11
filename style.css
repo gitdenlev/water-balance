@@ -1,14 +1,14 @@
+/* Загальні стилі */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
-    no-repeat center center fixed;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center fixed;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -23,7 +23,7 @@ body {
   background: linear-gradient(to right, #6997F0, #455DC4);
   padding: 10px 20px;
   color: white;
-  z-index: 1000; /* Щоб header був поверх інших елементів */
+  z-index: 1000;
 }
 
 .header .logo {
@@ -45,10 +45,11 @@ body {
   margin-left: 10px;
   width: 24px;
   height: 24px;
+  filter: brightness(0) invert(1); /* Для покращення видимості на темному фоні */
 }
 
 .container {
-  margin-top: 80px; /* Відступ для уникнення перекриття з хедером */
+  margin-top: 160px;
   background: transparent;
   border-radius: 25px;
   padding: 40px;
@@ -56,7 +57,6 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-
 
 .left-section {
   display: flex;
@@ -78,8 +78,7 @@ h1 {
   color: #333;
 }
 
-label,
-h2 {
+label, h2 {
   font-size: 1.2em;
   color: #333;
   font-weight: 600;
@@ -132,6 +131,7 @@ button:hover {
   background-color: #005bb5;
 }
 
+/* Коло прогресу */
 .circle-container {
   position: relative;
   width: 150px;
@@ -165,4 +165,25 @@ button:hover {
 
 #resetButton:hover {
   background-color: #e60000;
+}
+
+/* Текст про важливість води */
+.water-info {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  width: 80%;
+}
+
+.water-info h2 {
+  font-size: 2.2em;
+  color: #0072ff;
+  margin-bottom: 10px;
+}
+
+.water-info p {
+  font-size: 1.5em;
+  color: #333;
 }
