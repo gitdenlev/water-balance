@@ -8,9 +8,6 @@ html, body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -18,7 +15,6 @@ html, body {
   background: linear-gradient(to right, #6997F0, #455DC4);
   padding: 10px 20px;
   color: white;
-  z-index: 1000;
 }
 
 .header .logo {
@@ -65,7 +61,8 @@ html, body {
   margin-top: 20px;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -87,6 +84,7 @@ input {
   margin-top: 10px;
   border: 2px solid #0072ff;
   border-radius: 5px;
+  outline: none;
 }
 
 button {
@@ -96,6 +94,7 @@ button {
   margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 
 button:hover {
