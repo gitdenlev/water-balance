@@ -1,11 +1,10 @@
-/* Загальні стилі */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center fixed;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -26,164 +25,53 @@ body {
   z-index: 1000;
 }
 
-.header .logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.header .contacts {
-  display: flex;
-  align-items: center;
-}
-
-.header .contacts .phone {
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-.header .social-icons img {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1); /* Для покращення видимості на темному фоні */
-}
-
 .container {
-  margin-top: 160px;
-  background: transparent;
+  margin-top: 60px; /* Відступ для унікнення перекриття з хедером */
+  background: rgba(255, 255, 255, 0.8); /* Напівпрозорий бекграунд */
   border-radius: 25px;
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
 }
 
-.left-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-label, h2 {
-  font-size: 1.2em;
-  color: #333;
-  font-weight: 600;
-}
-
-input {
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #0072ff;
-  border-radius: 5px;
-  font-size: 1.1em;
-  outline: none;
-}
-
-button {
-  background: #0072ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #005bb5;
-}
-
-.target-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
-}
-
-.set-target {
-  width: 30%;
-  padding: 10px;
-  background-color: #0072ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background 0.3s ease;
-}
-
-.set-target:hover {
-  background-color: #005bb5;
-}
-
-/* Коло прогресу */
-.circle-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.progress-ring {
-  transform: rotate(-90deg);
-}
-
-.progress-ring__circle {
-  transition: stroke-dashoffset 0.5s;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-}
-
-.circle-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-#resetButton {
-  background-color: #ff3b3b;
-  margin-top: 20px;
-}
-
-#resetButton:hover {
-  background-color: #e60000;
-}
-
-/* Текст про важливість води */
 .water-info {
+  margin-top: 100px; /* Простір після хедера */
   text-align: center;
-  margin-top: 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .water-info h2 {
-  font-size: 2.2em;
+  font-size: 1.8em;
   color: #0072ff;
   margin-bottom: 10px;
 }
 
 .water-info p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #333;
+}
+
+.left-section, .right-section {
+  width: 45%;
+}
+
+h1, h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input, button {
+  font-size: 1.1em;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #005bb5;
 }
